@@ -12,9 +12,14 @@
 
 <body>
     <header>
+        <div class="left" id="header-welcome"></div>
+        <div class="right" id="header-buttons">
+            <button id="logOutBtn">Log out</button>
+            <button id="startRegisterBtn">Register</button>
+        </div>
         <!-- when not logged in -->
         <!-- show register/login -->
-                <!-- if register
+        <!-- if register
                     connection to database lost, creating local user -->
         <!-- when logged in  -->
         <!-- show "hello name"/logout -->
@@ -25,15 +30,30 @@
         <section class="fullscreen main-content">
 
         </section>
+        <div class="fullpage">
+            <div class=" loginFloater">
+                <label>Username</label>
+                <input type="text" id="usernameInput">
+                <br>
+                <label>Password</label>
+                <input type="password" id="passwordInput">
+                <br>
+                <button id="loginBtn">Login</button>
+                <br>
+                <div id="loginMsg"></div>
+            </div>
+        </div>
 
-        <div class="loginFloater">
-            <input type="text" id="usernameInput">
-            <br>
-            <input type="password" id="passwordInput">
-            <br>
-            <button id="loginBtn">Login</button>
-            <br>
-            <div id="resultsDiv"></div>
+        <div class="fullpage overlay hide" id="registerOverlay">
+            <div class="registerFloater">
+                <input type="text" id="usernameInputReg">
+                <br>
+                <input type="password" id="passwordInputReg">
+                <br>
+                <button id="registerFormBtn">Register</button>
+                <br>
+                <div id="registerMsg"></div>
+            </div>
         </div>
     </div>
     <footer>

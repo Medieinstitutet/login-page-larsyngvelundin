@@ -6,22 +6,22 @@
     },
     {
         "id": 1,
-        "username": "testaccount1",
-        "password": "test1"
+        "username": "mulle",
+        "password": "meck"
     },
     {
         "id": 2,
-        "username": "testaccount2",
-        "password": "test2"
+        "username": "blixten",
+        "password": "mcqueen"
     },
     {
         "id": 3,
-        "username": "testaccount3",
-        "password": "test3"
+        "username": "kaffe",
+        "password": "te"
     },
     {
         "id": 4,
-        "username": "testaccount4",
-        "password": "test4"
+        "username": "test",
+        "password": "password"
     }
 ]

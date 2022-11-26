@@ -1,3 +1,47 @@
 body{
     background:black;
+    color:white;
+}
+
+header{
+    width: 100vw;
+    position:absolute;
+    display:inline-block;
+    height:50px;
+    color: white;
+    z-index: 10;
+}
+header div{
+    position: relative;
+    display:inline;
+}
+
+.left{
+    left:0px;
+}
+.right{
+    right:0px;
+}
+
+.hide{
+    display:none;
+}
+
+.fullpage{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay{
+    background: red;
+
+}
+
+.registerFloater, .loginFloater{
+    position: relative;
+    left: 50%;
+    top: 50%;
 }
