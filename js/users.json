@@ -1,26 +1,21 @@
 [
     {
-        "id": 0,
         "username": "janne",
         "password": "test"
     },
     {
-        "id": 1,
         "username": "mulle",
         "password": "meck"
     },
     {
-        "id": 2,
         "username": "blixten",
         "password": "mcqueen"
     },
     {
-        "id": 3,
         "username": "kaffe",
         "password": "te"
     },
     {
-        "id": 4,
         "username": "test",
         "password": "password"
     }

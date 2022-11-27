@@ -62,10 +62,10 @@ logOutBtn.addEventListener("click", () => {
 startRegisterBtn.addEventListener("click", () => {
     console.log("User clicked 'Register'");
     registerOverlay.classList.toggle("hide");
-    if (startRegisterBtn.innerHTML == "Register"){
+    if (startRegisterBtn.innerHTML == "Register") {
         startRegisterBtn.innerHTML = "Login";
     }
-    else{
+    else {
         startRegisterBtn.innerHTML = "Register";
     }
     updateHTML();
@@ -76,17 +76,30 @@ registerFormBtn.addEventListener("click", () => {
     newUsername = usernameInputReg.value;
     newPassword = passwordInputReg.value;
     if (newUsername.length > 0 && newUsername != 'null') {
-        if (isPasswordValid(newPassword)) {
-            addUser(newUsername, newPassword);
-            updateHTML();
-            loginMsg.innerHTML = "Successfully registered user '" + newUsername + "'";
-            usernameInputReg.value = "";
-            passwordInputReg.value = "";
-            registerOverlay.classList.toggle("hide");
+        let userlist = JSON.parse(localStorage.getItem("users"));
+        let usernameFound = false;
+        for (let i = 0; i < userlist.length; i++) {
+            if (userlist[i]['username'] == newUsername) {
+                usernameFound = true;
+                break;
+            }
+        }
+        if (usernameFound) {
+            registerMsg.innerHTML = `'${newUsername}' is already taken`;
         }
         else {
-            registerMsg.innerHTML = "Please type a valid password<br>";
-            registerMsg.innerHTML += "At least 10 characters<br>";
+            if (isPasswordValid(newPassword)) {
+                addUser(newUsername, newPassword);
+                updateHTML();
+                loginMsg.innerHTML = "Successfully registered user '" + newUsername + "'";
+                usernameInputReg.value = "";
+                passwordInputReg.value = "";
+                registerOverlay.classList.toggle("hide");
+            }
+            else {
+                registerMsg.innerHTML = "Please type a valid password<br>";
+                registerMsg.innerHTML += "At least 10 characters<br>";
+            }
         }
     }
     else {
