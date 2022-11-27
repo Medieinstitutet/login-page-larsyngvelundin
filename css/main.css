@@ -10,6 +10,7 @@ header{
     height:50px;
     z-index: 10;
 }
+
 header div{
     position: relative;
     display:inline;
@@ -18,8 +19,10 @@ header div{
 .left{
     left:0px;
 }
+
 .right{
-    right:0px;
+    position: fixed;
+    right:20px;
 }
 
 .hide{
@@ -36,7 +39,6 @@ header div{
 
 .overlay{
     background: #555555;
-
 }
 
 .registerFloater, .loginFloater{
